@@ -7,12 +7,16 @@ import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import pic from "../assets/profile2.jpg";
+import CircleStatusnumber from "../Components/CircleStatusnumber";
 export default function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <ProfileCircle width={50} height={50} Images={pic} radius={29} />
-        <FontAwesome name="bars" size={30} />
+
+        <TouchableNativeFeedback>
+          <FontAwesome name="bars" size={30} />
+        </TouchableNativeFeedback>
       </View>
       <View>
         <Text style={{ fontSize: 30 }}>
@@ -22,6 +26,15 @@ export default function Home() {
       <View style={styles.body}>
         <TouchableNativeFeedback>
           <View style={styles.card}>
+            <View style={{ position: "absolute", top: 0, right: 0, zIndex: 2 }}>
+              <CircleStatusnumber
+                radius={20}
+                number={18}
+                width={25}
+                height={25}
+                color="white"
+              />
+            </View>
             <MaterialIcons name="cast-for-education" size={24} color="black" />
             <Text>Student Sys</Text>
           </View>
