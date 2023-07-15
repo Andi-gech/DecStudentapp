@@ -11,6 +11,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./Screens/Login";
 import Signup from "./Screens/Signup";
 import Home from "./Screens/Home";
+import Studentsys from "./Screens/Studentsys";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -32,6 +33,11 @@ export default function App() {
             options={{ headerShown: false }}
             name="Signup"
             component={Signup}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="StudentSys"
+            component={Studentsys}
           />
           <Stack.Screen
             options={{ headerShown: false }}

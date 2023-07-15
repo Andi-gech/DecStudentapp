@@ -1,30 +1,27 @@
 import { StyleSheet, Text, TouchableNativeFeedback, View } from "react-native";
 import React from "react";
-import ProfileCircle from "../Components/ProfileCircle";
+
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Entypo } from "@expo/vector-icons";
-import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
-import pic from "../assets/profile2.jpg";
+
 import CircleStatusnumber from "../Components/CircleStatusnumber";
-export default function Home() {
+import Header from "../Components/Header";
+export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <ProfileCircle width={50} height={50} Images={pic} radius={29} />
-
-        <TouchableNativeFeedback>
-          <FontAwesome name="bars" size={30} />
-        </TouchableNativeFeedback>
-      </View>
+      <Header />
       <View>
         <Text style={{ fontSize: 30 }}>
           HI <Text style={{ fontSize: 20, color: "orange" }}>Andi</Text>
         </Text>
       </View>
       <View style={styles.body}>
-        <TouchableNativeFeedback>
+        <TouchableNativeFeedback
+          onPress={() => navigation.navigate("StudentSys")}
+        >
           <View style={styles.card}>
             <View style={{ position: "absolute", top: 0, right: 0, zIndex: 2 }}>
               <CircleStatusnumber
@@ -88,15 +85,7 @@ const styles = StyleSheet.create({
 
     display: "flex",
   },
-  header: {
-    display: "flex",
-    width: "94%",
-    marginTop: 10,
 
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
   body: {
     flex: 1,
     width: "100%",
