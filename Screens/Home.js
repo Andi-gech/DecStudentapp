@@ -12,7 +12,6 @@ import Header from "../Components/Header";
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
-      <Header />
       <View>
         <Text style={{ fontSize: 30 }}>
           HI <Text style={{ fontSize: 20, color: "orange" }}>Andi</Text>
@@ -47,13 +46,15 @@ export default function Home({ navigation }) {
             <Text style={{ fontWeight: "100" }}>Attendance Sys</Text>
           </View>
         </TouchableNativeFeedback>
-        <TouchableNativeFeedback>
+        <TouchableNativeFeedback
+          onPress={() => navigation.navigate("Entrancesys")}
+        >
           <View style={styles.card}>
             <FontAwesome5 name="door-open" size={24} color="black" />
             <Text>Entrance Sys</Text>
           </View>
         </TouchableNativeFeedback>
-        <TouchableNativeFeedback>
+        <TouchableNativeFeedback onPress={() => navigation.navigate("library")}>
           <View style={styles.card}>
             <Ionicons name="library-outline" size={24} color="black" />
             <Text>library Sys</Text>
@@ -79,7 +80,7 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#FAFAFA",
 
     alignItems: "center",
 
@@ -100,6 +101,7 @@ const styles = StyleSheet.create({
     width: 130,
     display: "flex",
     alignItems: "center",
+    backgroundColor: "white",
     justifyContent: "center",
     margin: 10,
     borderRadius: 5,

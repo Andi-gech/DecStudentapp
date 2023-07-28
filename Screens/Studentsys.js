@@ -6,7 +6,7 @@ import Message from "../Components/Message";
 import Activites from "../Components/Activites";
 import PlanCard from "../Components/PlanCard";
 
-export default function Studentsys() {
+export default function Studentsys({ navigation }) {
   const data = [
     {
       id: "1",
@@ -46,7 +46,6 @@ export default function Studentsys() {
   ];
   return (
     <View style={styles.container}>
-      <Header />
       <View style={styles.body}>
         <View style={styles.notify}>
           <Feather name="bell" size={24} color="gray" />
@@ -80,7 +79,7 @@ export default function Studentsys() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#FAFAFA",
 
     alignItems: "center",
 
@@ -111,12 +110,23 @@ const styles = StyleSheet.create({
   activity: {
     flex: 1,
     marginBottom: 5,
-    backgroundColor: "rgba(227, 227, 227, 3.21)",
+    backgroundColor: "white",
+
+    width: "95%",
 
     borderRadius: 20,
     display: "flex",
     padding: 10,
     alignItems: "center",
+    shadowColor: "hsla(0, 9.10%, 82.70%, 0.70)",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.4,
+    shadowRadius: 1.0,
+
+    elevation: 1,
   },
 
   calander: {

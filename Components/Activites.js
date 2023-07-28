@@ -12,8 +12,8 @@ export default function Activites() {
         height={8}
         color="orange"
         borderWidth={0}
-        animated={true}
-        unfilledColor="white"
+        unfilledColor="#FAFAFA"
+        animated
       />
     </View>
   );
@@ -26,5 +26,7 @@ const styles = StyleSheet.create({
   },
   texts: {
     marginBottom: 10,
+    color: "black",
+    fontWeight: "normal",
   },
 });

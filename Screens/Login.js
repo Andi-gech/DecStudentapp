@@ -23,7 +23,7 @@ export default function Login({ navigation }) {
           cursorColor={"red"}
         />
         <View style={styles.loginbutton}>
-          <Button name={"Signup"} onclick={() => navigation.navigate("Home")} />
+          <Button name={"Login"} onclick={() => navigation.navigate("Home")} />
         </View>
         <Text
           style={styles.sublinks}

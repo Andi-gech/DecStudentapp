@@ -19,10 +19,12 @@ export default function Message() {
 const styles = StyleSheet.create({
   messagetext: {
     width: "80%",
-    marginLeft: 5,
+    marginLeft: 15,
+    color: "black",
   },
   message: {
     backgroundColor: "white",
+    padding: 10,
     height: 100,
     width: "90%",
     display: "flex",
@@ -31,8 +33,16 @@ const styles = StyleSheet.create({
     borderRadius: 10,
 
     alignSelf: "center",
-    backgroundColor: "rgba(227, 227, 227, 3.21)",
 
     margin: 5,
+    shadowColor: "hsla(0, 9.10%, 82.70%, 0.70)",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.4,
+    shadowRadius: 1.0,
+
+    elevation: 1,
   },
 });
